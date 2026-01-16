@@ -10,7 +10,7 @@ sc_count = 0
 for i in the_string:
     if i.isalpha():
         alpha_count += 1
-    elif i.isdigit():
+    elif i.isdigit(): #we can also use isnumeric()
         digit_count += 1
     elif i.isspace():
         ws_count += 1

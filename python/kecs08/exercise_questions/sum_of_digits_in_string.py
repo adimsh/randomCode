@@ -6,7 +6,7 @@ def sum_of_digits_in_a_string(the_string: str) -> int:
     """this function calculates the sum of all the digits embedded in the given string using the isdigit() built-in function"""
     result = 0
     for i in the_string:
-        if i.isdigit():
+        if i.isdigit():  #we can also use isnumeric()
             result += int(i)
     return result
 
