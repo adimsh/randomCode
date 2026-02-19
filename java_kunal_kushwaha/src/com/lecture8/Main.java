@@ -27,6 +27,8 @@
     (ii) java com.lecture8.fileName.java
 */
 
+import java.util.Scanner;
+
 public class Main {
     /* 
         -execution of a java prog starts from the main method
@@ -38,6 +40,13 @@ public class Main {
     */
     public static void main(String[] args){
         System.out.println("Hello, World!");
+        // if we write System.out.print()- it does not add a new line
+
+
+        // to take input
+        Scanner input = new Scanner(System.in); // we need to import java.util.scanner
+        // to print that input
+        System.out.println(input.nextInt());
     }
 }
 
@@ -46,3 +55,22 @@ public class Main {
     (this is standard practice, source code -> 'src' folder, byte code -> 'out' folder)
     syntax: javac -d .. fileName.java (the .. represent the previous/parent directory)
 */
+
+// the $PATH variable is a colon-separated list of directories that the Bash shell searches to find executable files when you run a command. 
+// Is it in .bashrc? --- Not by default. It is usually set system-wide in files like /etc/profile or /etc/environment. However, users often define custom paths in ~/.bashrc or ~/.profile to make changes permanent for their own sessions.
+// How it works:    When you type a command, the shell checks each directory in the list from left to right. It executes the first matching file it finds; if nothing is found in those directories, you get a "command not found" error.
+
+
+// To add a new folder to your $PATH permanently using your ~/.bashrc file, follow these steps:
+
+// Open the file in a text editor like nano:
+// nano ~/.bashrc
+// Scroll to the very bottom and add this line (replace /your/new/folder with your actual directory):
+// export PATH="$PATH:/your/new/folder"
+// Save and exit (in nano, press Ctrl+O, Enter, then Ctrl+X).
+// Apply the changes immediately to your current terminal session:
+// source ~/.bashrc
+// Key Command Breakdown
+// $PATH (at the start of the value) ensures you keep all your existing search directories.
+// :/your/new/folder appends your new folder to the list, using a colon as the separator.
+// export ensures the updated variable is available to any programs you launch from that terminal. 
